@@ -22,9 +22,6 @@ public class Main {
         String lineInput = scanner.nextLine();
         Scanner lineScanner = new Scanner(lineInput).useDelimiter(";").useLocale(Locale.ENGLISH);
 
-        // læse overskrifterne?
-       // lineScanner.next();
-
         if (lineScanner.hasNextInt()){
 
           int postNumber = lineScanner.nextInt();
@@ -66,18 +63,15 @@ public class Main {
     main.registerNatives();
 
     Scanner scanner = new Scanner(System.in);
+    boolean isRunning = true;
 
-    System.out.print("Skriv ind postnummeret til den by du vil søge op: ");
-    int keyboard_input = scanner.nextInt();
+    while(isRunning){
 
-    System.out.println(main.findCityByPostNumber(keyboard_input));
+      System.out.print("Skriv ind postnummeret til den by du vil søge op: ");
+      int keyboard_input = scanner.nextInt();
 
+      System.out.println(main.findCityByPostNumber(keyboard_input));
 
-
-
-
+    }
   }
-
-
-
 }
